@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Conversion Count</title>
+    <style>
+        body {
+            color: grey;
+            background-color: #191919;
+        }
+
+        h1 {
+            text-align: center;
+            font-weight: 700;
+            color: green;
+        }
+
+        .card {
+            border: none;
+            background-color: #000;
+        }
+
+        .card-header {
+            background-color: #000;
+        }
+
+        .card-body {
+            background-color: #232323;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <section class="py-5">
+            <div class="card-deck">
+                <div class="card">
+                    <div class="card-header">
+                        IronMan
+                    </div>
+                    <div class="card-body">
+                        <h1 id="ironman">0</h1>
+                        <br>
+                        <div class="d-flex justify-content-around">
+                            <button id="ironmanMinus" class="btn btn-dark">-</button>
+                            <button id="ironmanPlus" class="btn btn-dark">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        Thor
+                    </div>
+                    <div class="card-body">
+                        <h1 id="thor">0</h1>
+                        <br>
+                        <div class="d-flex justify-content-around">
+                            <button id="thorMinus" class="btn btn-dark">-</button>
+                            <button id="thorPlus" class="btn btn-dark">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        SpiderMan
+                    </div>
+                    <div class="card-body">
+                        <h1 id="spiderman">0</h1>
+                        <br>
+                        <div class="d-flex justify-content-around">
+                            <button id="spidermanMinus" class="btn btn-dark">-</button>
+                            <button id="spidermanPlus" class="btn btn-dark">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script>
+        function Plus(id) {
+            document.getElementById(id).innerText = parseFloat(document.getElementById(id).innerText) + 1;
+        }
+
+        function Minus(id) {
+            document.getElementById(id).innerText = parseFloat(document.getElementById(id).innerText) - 1;
+        }
+
+
+        document.getElementById("ironmanPlus").addEventListener("click", function () {
+            Plus("ironman")
+        })
+        document.getElementById("ironmanMinus").addEventListener("click", function () {
+            Minus("ironman")
+        })
+
+        document.getElementById("thorPlus").addEventListener("click", function () {
+            Plus("thor")
+        })
+        document.getElementById("thorMinus").addEventListener("click", function () {
+            Minus("thor")
+        })
+
+        document.getElementById("spidermanPlus").addEventListener("click", function () {
+            Plus("spiderman")
+        })
+        document.getElementById("spidermanMinus").addEventListener("click", function () {
+            Minus("spiderman")
+        })
+    </script>
+</body>
+
+</html>
